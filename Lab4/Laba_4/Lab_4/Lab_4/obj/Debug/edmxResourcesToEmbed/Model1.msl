@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PersonnelModelContainer" CdmEntityContainer="PersonnelEntities">
+    <EntitySetMapping Name="Department">
+      <EntityTypeMapping TypeName="PersonnelModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="idDep" ColumnName="idDep" />
+          <ScalarProperty Name="department1" ColumnName="department" />
+          <ScalarProperty Name="leader" ColumnName="leader" />
+          <ScalarProperty Name="phoneNum" ColumnName="phoneNum" />
+          <ScalarProperty Name="location" ColumnName="location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Official_information">
+      <EntityTypeMapping TypeName="PersonnelModel.Official_information">
+        <MappingFragment StoreEntitySet="Official_information">
+          <ScalarProperty Name="idEmployee" ColumnName="idEmployee" />
+          <ScalarProperty Name="personalNum" ColumnName="personalNum" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+          <ScalarProperty Name="idDep" ColumnName="idDep" />
+          <ScalarProperty Name="education" ColumnName="education" />
+          <ScalarProperty Name="experience" ColumnName="experience" />
+          <ScalarProperty Name="phoneNum" ColumnName="phoneNum" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personal_information">
+      <EntityTypeMapping TypeName="PersonnelModel.Personal_information">
+        <MappingFragment StoreEntitySet="Personal_information">
+          <ScalarProperty Name="personalNum" ColumnName="personalNum" />
+          <ScalarProperty Name="placeBirth" ColumnName="placeBirth" />
+          <ScalarProperty Name="passport" ColumnName="passport" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="regAddress" ColumnName="regAddress" />
+          <ScalarProperty Name="maritalStat" ColumnName="maritalStat" />
+          <ScalarProperty Name="children" ColumnName="children" />
+          <ScalarProperty Name="dateBirth" ColumnName="dateBirth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vacancy">
+      <EntityTypeMapping TypeName="PersonnelModel.Vacancy">
+        <MappingFragment StoreEntitySet="Vacancy">
+          <ScalarProperty Name="idVacancy" ColumnName="idVacancy" />
+          <ScalarProperty Name="idDep" ColumnName="idDep" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

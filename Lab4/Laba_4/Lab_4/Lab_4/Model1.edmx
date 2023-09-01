@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище PersonnelModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="idDep" />
+          </Key>
+          <Property Name="idDep" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="department" Type="varchar" MaxLength="50" />
+          <Property Name="leader" Type="varchar" MaxLength="50" />
+          <Property Name="phoneNum" Type="varchar" MaxLength="20" />
+          <Property Name="location" Type="geography" />
+        </EntityType>
+        <EntityType Name="Official_information">
+          <Key>
+            <PropertyRef Name="idEmployee" />
+          </Key>
+          <Property Name="idEmployee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personalNum" Type="int" />
+          <Property Name="surname" Type="varchar" MaxLength="50" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="patronymic" Type="varchar" MaxLength="50" />
+          <Property Name="idDep" Type="int" />
+          <Property Name="education" Type="varchar" MaxLength="50" />
+          <Property Name="experience" Type="varchar" MaxLength="50" />
+          <Property Name="phoneNum" Type="varchar" MaxLength="20" />
+          <Property Name="salary" Type="int" />
+          <Property Name="status" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Personal_information">
+          <Key>
+            <PropertyRef Name="personalNum" />
+          </Key>
+          <Property Name="personalNum" Type="int" Nullable="false" />
+          <Property Name="placeBirth" Type="varchar" MaxLength="25" />
+          <Property Name="passport" Type="varchar" MaxLength="30" />
+          <Property Name="address" Type="varchar" MaxLength="50" />
+          <Property Name="regAddress" Type="varchar" MaxLength="50" />
+          <Property Name="maritalStat" Type="varchar" MaxLength="20" />
+          <Property Name="children" Type="int" />
+          <Property Name="dateBirth" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Vacancy">
+          <Key>
+            <PropertyRef Name="idVacancy" />
+          </Key>
+          <Property Name="idVacancy" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idDep" Type="int" />
+          <Property Name="salary" Type="int" />
+          <Property Name="status" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <Association Name="idDep_ofInf_FK">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+          <End Role="Official_information" Type="Self.Official_information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="idDep" />
+            </Principal>
+            <Dependent Role="Official_information">
+              <PropertyRef Name="idDep" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="idDep_vac_FK">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+          <End Role="Vacancy" Type="Self.Vacancy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="idDep" />
+            </Principal>
+            <Dependent Role="Vacancy">
+              <PropertyRef Name="idDep" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="personalNum_FK">
+          <End Role="Personal_information" Type="Self.Personal_information" Multiplicity="0..1" />
+          <End Role="Official_information" Type="Self.Official_information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal_information">
+              <PropertyRef Name="personalNum" />
+            </Principal>
+            <Dependent Role="Official_information">
+              <PropertyRef Name="personalNum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище PersonnelModelContainer">
+          <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Official_information" EntityType="Self.Official_information" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personal_information" EntityType="Self.Personal_information" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vacancy" EntityType="Self.Vacancy" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="idDep_ofInf_FK" Association="Self.idDep_ofInf_FK">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Official_information" EntitySet="Official_information" />
+          </AssociationSet>
+          <AssociationSet Name="idDep_vac_FK" Association="Self.idDep_vac_FK">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Vacancy" EntitySet="Vacancy" />
+          </AssociationSet>
+          <AssociationSet Name="personalNum_FK" Association="Self.personalNum_FK">
+            <End Role="Personal_information" EntitySet="Personal_information" />
+            <End Role="Official_information" EntitySet="Official_information" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PersonnelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="idDep" />
+          </Key>
+          <Property Name="idDep" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="department1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="leader" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phoneNum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="location" Type="Geography" />
+          <NavigationProperty Name="Official_information" Relationship="Self.idDep_ofInf_FK" FromRole="Department" ToRole="Official_information" />
+          <NavigationProperty Name="Vacancy" Relationship="Self.idDep_vac_FK" FromRole="Department" ToRole="Vacancy" />
+        </EntityType>
+        <EntityType Name="Official_information">
+          <Key>
+            <PropertyRef Name="idEmployee" />
+          </Key>
+          <Property Name="idEmployee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personalNum" Type="Int32" />
+          <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="idDep" Type="Int32" />
+          <Property Name="education" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="experience" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phoneNum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="salary" Type="Int32" />
+          <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Department" Relationship="Self.idDep_ofInf_FK" FromRole="Official_information" ToRole="Department" />
+          <NavigationProperty Name="Personal_information" Relationship="Self.personalNum_FK" FromRole="Official_information" ToRole="Personal_information" />
+        </EntityType>
+        <EntityType Name="Personal_information">
+          <Key>
+            <PropertyRef Name="personalNum" />
+          </Key>
+          <Property Name="personalNum" Type="Int32" Nullable="false" />
+          <Property Name="placeBirth" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="passport" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="regAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="maritalStat" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="children" Type="Int32" />
+          <Property Name="dateBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Official_information" Relationship="Self.personalNum_FK" FromRole="Personal_information" ToRole="Official_information" />
+        </EntityType>
+        <EntityType Name="Vacancy">
+          <Key>
+            <PropertyRef Name="idVacancy" />
+          </Key>
+          <Property Name="idVacancy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idDep" Type="Int32" />
+          <Property Name="salary" Type="Int32" />
+          <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Department" Relationship="Self.idDep_vac_FK" FromRole="Vacancy" ToRole="Department" />
+        </EntityType>
+        <Association Name="idDep_ofInf_FK">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+          <End Role="Official_information" Type="Self.Official_information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="idDep" />
+            </Principal>
+            <Dependent Role="Official_information">
+              <PropertyRef Name="idDep" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="idDep_vac_FK">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+          <End Role="Vacancy" Type="Self.Vacancy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="idDep" />
+            </Principal>
+            <Dependent Role="Vacancy">
+              <PropertyRef Name="idDep" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="personalNum_FK">
+          <End Role="Personal_information" Type="Self.Personal_information" Multiplicity="0..1" />
+          <End Role="Official_information" Type="Self.Official_information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal_information">
+              <PropertyRef Name="personalNum" />
+            </Principal>
+            <Dependent Role="Official_information">
+              <PropertyRef Name="personalNum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PersonnelEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Department" EntityType="Self.Department" />
+          <EntitySet Name="Official_information" EntityType="Self.Official_information" />
+          <EntitySet Name="Personal_information" EntityType="Self.Personal_information" />
+          <EntitySet Name="Vacancy" EntityType="Self.Vacancy" />
+          <AssociationSet Name="idDep_ofInf_FK" Association="Self.idDep_ofInf_FK">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Official_information" EntitySet="Official_information" />
+          </AssociationSet>
+          <AssociationSet Name="idDep_vac_FK" Association="Self.idDep_vac_FK">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Vacancy" EntitySet="Vacancy" />
+          </AssociationSet>
+          <AssociationSet Name="personalNum_FK" Association="Self.personalNum_FK">
+            <End Role="Personal_information" EntitySet="Personal_information" />
+            <End Role="Official_information" EntitySet="Official_information" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище PersonnelModelContainer" CdmEntityContainer="PersonnelEntities">
+          <EntitySetMapping Name="Department">
+            <EntityTypeMapping TypeName="PersonnelModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="idDep" ColumnName="idDep" />
+                <ScalarProperty Name="department1" ColumnName="department" />
+                <ScalarProperty Name="leader" ColumnName="leader" />
+                <ScalarProperty Name="phoneNum" ColumnName="phoneNum" />
+                <ScalarProperty Name="location" ColumnName="location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Official_information">
+            <EntityTypeMapping TypeName="PersonnelModel.Official_information">
+              <MappingFragment StoreEntitySet="Official_information">
+                <ScalarProperty Name="idEmployee" ColumnName="idEmployee" />
+                <ScalarProperty Name="personalNum" ColumnName="personalNum" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+                <ScalarProperty Name="idDep" ColumnName="idDep" />
+                <ScalarProperty Name="education" ColumnName="education" />
+                <ScalarProperty Name="experience" ColumnName="experience" />
+                <ScalarProperty Name="phoneNum" ColumnName="phoneNum" />
+                <ScalarProperty Name="salary" ColumnName="salary" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personal_information">
+            <EntityTypeMapping TypeName="PersonnelModel.Personal_information">
+              <MappingFragment StoreEntitySet="Personal_information">
+                <ScalarProperty Name="personalNum" ColumnName="personalNum" />
+                <ScalarProperty Name="placeBirth" ColumnName="placeBirth" />
+                <ScalarProperty Name="passport" ColumnName="passport" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="regAddress" ColumnName="regAddress" />
+                <ScalarProperty Name="maritalStat" ColumnName="maritalStat" />
+                <ScalarProperty Name="children" ColumnName="children" />
+                <ScalarProperty Name="dateBirth" ColumnName="dateBirth" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vacancy">
+            <EntityTypeMapping TypeName="PersonnelModel.Vacancy">
+              <MappingFragment StoreEntitySet="Vacancy">
+                <ScalarProperty Name="idVacancy" ColumnName="idVacancy" />
+                <ScalarProperty Name="idDep" ColumnName="idDep" />
+                <ScalarProperty Name="salary" ColumnName="salary" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

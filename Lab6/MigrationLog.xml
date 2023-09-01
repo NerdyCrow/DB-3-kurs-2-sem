@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<log>
+<record>
+  <date>2023-05-02T16:12:30.339033100Z</date>
+  <nanos>33100</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Catalog SoftLicenseManagement, Schema dbo coalesced to single schema SoftLicenseManagement</message>
+  <key>Convert.COALESCED</key>
+  <catalog>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</catalog>
+  <param>SoftLicenseManagement</param>
+  <param>dbo</param>
+  <param>SoftLicenseManagement</param>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@112be84c</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:30.414726400Z</date>
+  <nanos>726400</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConvertUtils</class>
+  <message>Index 'XMLIndex_sec' on table 'Report' has been dropped as it is a duplicate of index 'XMLIndex'</message>
+  <key>Convert.DROPPEDDUPLICATEINDEX</key>
+  <catalog>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</catalog>
+  <param>XMLIndex_sec</param>
+  <param>Report</param>
+  <param>XMLIndex</param>
+  <param>XMLIndex, MD_INDEXES, 94951Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:31.859767300Z</date>
+  <nanos>767300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Following objects have had name changes applied</message>
+  <key>Convert.IDENTIFIER_TRANSFORMED_HEADING</key>
+  <catalog>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</catalog>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@61ae94e4</param>
+
+<record>
+  <date>2023-05-02T16:12:31.859767300Z</date>
+  <nanos>767300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Index 'XMLIndex' Changed to 'XMLIndex_sec' (Invalid characters, reserved word or clash)</message>
+  <param>XMLINDEX_SEC_1, MD_INDEXES, 94951Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:31.859767300Z</date>
+  <nanos>767300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Index 'XMLIndex' Changed to 'XMLINDEX_SEC_1' (Invalid characters, reserved word or clash)</message>
+  <param>XMLINDEX_SEC_1, MD_INDEXES, 94951Convert</param>
+
+</record>
+</record>
+<record>
+  <date>2023-05-02T16:12:35.174309100Z</date>
+  <nanos>309100</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Index 'XMLINDEX_SEC_1' transformed to index type 'ctxsys.context' as it indexes a CLOB or BLOB field.</message>
+  <key>Convert.TEXT_INDEX_CREATED</key>
+  <catalog>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</catalog>
+  <param>XMLINDEX_SEC_1</param>
+  <param>ctxsys.context</param>
+  <param>XMLINDEX_SEC_1, MD_INDEXES, 94951Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:35.434769900Z</date>
+  <nanos>769900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Default Values Transformed: The following column default values have been transformed during conversion</message>
+  <key>Convert.DEFAULT_LOG_HEADER</key>
+  <catalog>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</catalog>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@112be84c</param>
+
+<record>
+  <date>2023-05-02T16:12:35.434769900Z</date>
+  <nanos>769900</nanos>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Default value (getdate()) has been replaced with SYSDATE</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@39a591d9</param>
+
+<record>
+  <date>2023-05-02T16:12:35.434769900Z</date>
+  <nanos>769900</nanos>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>SoftLicenseManagement.Licenses.PaymentDate</message>
+  <param>Licenses, MD_TABLES, 90701Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:35.434769900Z</date>
+  <nanos>769900</nanos>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>SoftLicenseManagement.LicensesHistory.PaymentDate</message>
+  <param>LicensesHistory, MD_TABLES, 92051Convert</param>
+
+</record>
+</record>
+</record>
+<record>
+  <date>2023-05-02T16:12:39.227359300Z</date>
+  <nanos>359300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:vw_InactiveLicenses</message>
+  <param>vw_InactiveLicenses, MD_VIEWS, 21751Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:40.750127400Z</date>
+  <nanos>127400</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted vw_InactiveLicenses in 1 seconds</message>
+  <param>vw_InactiveLicenses, MD_VIEWS, 95351Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:41.070334100Z</date>
+  <nanos>334100</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:vw_ActiveLicenses</message>
+  <param>vw_ActiveLicenses, MD_VIEWS, 21801Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:42.364853900Z</date>
+  <nanos>853900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted vw_ActiveLicenses in 1 seconds</message>
+  <param>vw_ActiveLicenses, MD_VIEWS, 95451Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:42.680552100Z</date>
+  <nanos>552100</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:vw_Unpayment</message>
+  <param>vw_Unpayment, MD_VIEWS, 21851Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:43.715086Z</date>
+  <nanos>86000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted vw_Unpayment in 0 seconds</message>
+  <param>vw_Unpayment, MD_VIEWS, 95551Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:43.862346300Z</date>
+  <nanos>346300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:CountOfCustLic</message>
+  <param>CountOfCustLic, MD_STORED_PROGRAMS, 95751Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:44.560589200Z</date>
+  <nanos>589200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted CountOfCustLic in 0 seconds</message>
+  <param>CountOfCustLic, MD_STORED_PROGRAMS, 95751Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:44.906540Z</date>
+  <nanos>540000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:CountOfLicenses</message>
+  <param>CountOfLicenses, MD_STORED_PROGRAMS, 95901Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:45.358961700Z</date>
+  <nanos>961700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted CountOfLicenses in 0 seconds</message>
+  <param>CountOfLicenses, MD_STORED_PROGRAMS, 95901Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:45.681838400Z</date>
+  <nanos>838400</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:fn_diagramobjects</message>
+  <param>fn_diagramobjects, MD_STORED_PROGRAMS, 96251Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:46.150624Z</date>
+  <nanos>624000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Multiple Limitations for Stored Procedure fn_diagramobjects</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@7897cf3e</param>
+
+<record>
+  <date>2023-05-02T16:12:46.150624Z</date>
+  <nanos>624000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'OBJECT_ID' encountered on Stored Procedure SoftLicenseManagement.dbo.fn_diagramobjects line 18 column 32</message>
+  <param>fn_diagramobjects, MD_STORED_PROGRAMS, 96251</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:46.150624Z</date>
+  <nanos>624000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'OBJECT_ID' encountered on Stored Procedure SoftLicenseManagement.dbo.fn_diagramobjects line 19 column 22</message>
+  <param>fn_diagramobjects, MD_STORED_PROGRAMS, 96251</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:46.150624Z</date>
+  <nanos>624000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'OBJECT_ID' encountered on Stored Procedure SoftLicenseManagement.dbo.fn_diagramobjects line 20 column 23</message>
+  <param>fn_diagramobjects, MD_STORED_PROGRAMS, 96251</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:46.150624Z</date>
+  <nanos>624000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'OBJECT_ID' encountered on Stored Procedure SoftLicenseManagement.dbo.fn_diagramobjects line 21 column 32</message>
+  <param>fn_diagramobjects, MD_STORED_PROGRAMS, 96251</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:46.150624Z</date>
+  <nanos>624000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'OBJECT_ID' encountered on Stored Procedure SoftLicenseManagement.dbo.fn_diagramobjects line 22 column 24</message>
+  <param>fn_diagramobjects, MD_STORED_PROGRAMS, 96251</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:46.150624Z</date>
+  <nanos>624000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'OBJECT_ID' encountered on Stored Procedure SoftLicenseManagement.dbo.fn_diagramobjects line 23 column 24</message>
+  <param>fn_diagramobjects, MD_STORED_PROGRAMS, 96251</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:46.150624Z</date>
+  <nanos>624000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'OBJECT_ID' encountered on Stored Procedure SoftLicenseManagement.dbo.fn_diagramobjects line 24 column 23</message>
+  <param>fn_diagramobjects, MD_STORED_PROGRAMS, 96251</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:46.150624Z</date>
+  <nanos>624000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'OBJECT_ID' encountered on Stored Procedure SoftLicenseManagement.dbo.fn_diagramobjects line 25 column 22</message>
+  <param>fn_diagramobjects, MD_STORED_PROGRAMS, 96251</param>
+
+</record>
+</record>
+<record>
+  <date>2023-05-02T16:12:46.163964800Z</date>
+  <nanos>964800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted fn_diagramobjects in 0 seconds</message>
+  <param>fn_diagramobjects, MD_STORED_PROGRAMS, 96251Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:46.536385600Z</date>
+  <nanos>385600</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:udf_TotalCostOfPurchasedLicenses</message>
+  <param>udf_TotalCostOfPurchasedLicenses, MD_STORED_PROGRAMS, 97701Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:47.463719900Z</date>
+  <nanos>719900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted udf_TotalCostOfPurchasedLicenses in 0 seconds</message>
+  <param>udf_TotalCostOfPurchasedLicenses, MD_STORED_PROGRAMS, 97701Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:47.822303700Z</date>
+  <nanos>303700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:AddSubordinate</message>
+  <param>AddSubordinate, MD_STORED_PROGRAMS, 95651Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:48.788007600Z</date>
+  <nanos>7600</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted AddSubordinate in 0 seconds</message>
+  <param>AddSubordinate, MD_STORED_PROGRAMS, 95651Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:49.317502Z</date>
+  <nanos>502000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:Distancecontact</message>
+  <param>Distancecontact, MD_STORED_PROGRAMS, 96051Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:50.462289700Z</date>
+  <nanos>289700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation '=' encountered on Stored Procedure SoftLicenseManagement.dbo.Distancecontact line 10 column 13</message>
+  <param>Distancecontact, MD_STORED_PROGRAMS, 96051</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:50.463489600Z</date>
+  <nanos>489600</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted Distancecontact in 1 seconds</message>
+  <param>Distancecontact, MD_STORED_PROGRAMS, 96051Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:50.809469300Z</date>
+  <nanos>469300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:DistanceUser</message>
+  <param>DistanceUser, MD_STORED_PROGRAMS, 96151Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:51.521998Z</date>
+  <nanos>998000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation '=' encountered on Stored Procedure SoftLicenseManagement.dbo.DistanceUser line 10 column 13</message>
+  <param>DistanceUser, MD_STORED_PROGRAMS, 96151</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:51.524441100Z</date>
+  <nanos>441100</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted DistanceUser in 0 seconds</message>
+  <param>DistanceUser, MD_STORED_PROGRAMS, 96151Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:51.956063300Z</date>
+  <nanos>63300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:GenerateXML</message>
+  <param>GenerateXML, MD_STORED_PROGRAMS, 96401Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:54.190441400Z</date>
+  <nanos>441400</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted GenerateXML in 2 seconds</message>
+  <param>GenerateXML, MD_STORED_PROGRAMS, 96401Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:54.517980200Z</date>
+  <nanos>980200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:GetClosestContact</message>
+  <param>GetClosestContact, MD_STORED_PROGRAMS, 96501Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:55.415073Z</date>
+  <nanos>73000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted GetClosestContact in 0 seconds</message>
+  <param>GetClosestContact, MD_STORED_PROGRAMS, 96501Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:55.753868200Z</date>
+  <nanos>868200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:InsertReportXML</message>
+  <param>InsertReportXML, MD_STORED_PROGRAMS, 96601Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:57.947980900Z</date>
+  <nanos>980900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted InsertReportXML in 2 seconds</message>
+  <param>InsertReportXML, MD_STORED_PROGRAMS, 96601Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:58.337458900Z</date>
+  <nanos>458900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:MoveSubtree</message>
+  <param>MoveSubtree, MD_STORED_PROGRAMS, 96701Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:59.672175300Z</date>
+  <nanos>175300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted MoveSubtree in 1 seconds</message>
+  <param>MoveSubtree, MD_STORED_PROGRAMS, 96701Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:59.981548200Z</date>
+  <nanos>548200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:SelectData</message>
+  <param>SelectData, MD_STORED_PROGRAMS, 96801Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:00.412269800Z</date>
+  <nanos>269800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted SelectData in 0 seconds</message>
+  <param>SelectData, MD_STORED_PROGRAMS, 96801Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:00.802001Z</date>
+  <nanos>1000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:ShowSubordinates</message>
+  <param>ShowSubordinates, MD_STORED_PROGRAMS, 96901Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:02.783015500Z</date>
+  <nanos>15500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted ShowSubordinates in 1 seconds</message>
+  <param>ShowSubordinates, MD_STORED_PROGRAMS, 96901Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:03.143893600Z</date>
+  <nanos>893600</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:sp_alterdiagram</message>
+  <param>sp_alterdiagram, MD_STORED_PROGRAMS, 97001Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:04.169458800Z</date>
+  <nanos>458800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Multiple Limitations for Stored Procedure sp_alterdiagram</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@7f1c311c</param>
+
+<record>
+  <date>2023-05-02T16:13:04.169458800Z</date>
+  <nanos>458800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'EXECUTE_AS' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_alterdiagram line 27 column 3</message>
+  <param>sp_alterdiagram, MD_STORED_PROGRAMS, 97001</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:04.169458800Z</date>
+  <nanos>458800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'IS_MEMBER' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_alterdiagram line 29 column 19</message>
+  <param>sp_alterdiagram, MD_STORED_PROGRAMS, 97001</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:04.169458800Z</date>
+  <nanos>458800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'REVERT' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_alterdiagram line 32 column 3</message>
+  <param>sp_alterdiagram, MD_STORED_PROGRAMS, 97001</param>
+
+</record>
+</record>
+<record>
+  <date>2023-05-02T16:13:04.174933600Z</date>
+  <nanos>933600</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted sp_alterdiagram in 1 seconds</message>
+  <param>sp_alterdiagram, MD_STORED_PROGRAMS, 97001Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:04.563005700Z</date>
+  <nanos>5700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:sp_creatediagram</message>
+  <param>sp_creatediagram, MD_STORED_PROGRAMS, 97101Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:05.235116500Z</date>
+  <nanos>116500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Multiple Limitations for Stored Procedure sp_creatediagram</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@5c16997d</param>
+
+<record>
+  <date>2023-05-02T16:13:05.235116500Z</date>
+  <nanos>116500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'EXECUTE_AS' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_creatediagram line 23 column 3</message>
+  <param>sp_creatediagram, MD_STORED_PROGRAMS, 97101</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:05.235116500Z</date>
+  <nanos>116500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'IS_MEMBER' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_creatediagram line 25 column 19</message>
+  <param>sp_creatediagram, MD_STORED_PROGRAMS, 97101</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:05.235116500Z</date>
+  <nanos>116500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'REVERT' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_creatediagram line 26 column 3</message>
+  <param>sp_creatediagram, MD_STORED_PROGRAMS, 97101</param>
+
+</record>
+</record>
+<record>
+  <date>2023-05-02T16:13:05.237949700Z</date>
+  <nanos>949700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted sp_creatediagram in 0 seconds</message>
+  <param>sp_creatediagram, MD_STORED_PROGRAMS, 97101Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:05.622689200Z</date>
+  <nanos>689200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:sp_dropdiagram</message>
+  <param>sp_dropdiagram, MD_STORED_PROGRAMS, 97201Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:06.285570200Z</date>
+  <nanos>570200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Multiple Limitations for Stored Procedure sp_dropdiagram</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@6178d534</param>
+
+<record>
+  <date>2023-05-02T16:13:06.284994Z</date>
+  <nanos>994000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'EXECUTE_AS' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_dropdiagram line 22 column 3</message>
+  <param>sp_dropdiagram, MD_STORED_PROGRAMS, 97201</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:06.284994Z</date>
+  <nanos>994000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'IS_MEMBER' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_dropdiagram line 24 column 19</message>
+  <param>sp_dropdiagram, MD_STORED_PROGRAMS, 97201</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:06.285570200Z</date>
+  <nanos>570200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'REVERT' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_dropdiagram line 27 column 3</message>
+  <param>sp_dropdiagram, MD_STORED_PROGRAMS, 97201</param>
+
+</record>
+</record>
+<record>
+  <date>2023-05-02T16:13:06.288701600Z</date>
+  <nanos>701600</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted sp_dropdiagram in 0 seconds</message>
+  <param>sp_dropdiagram, MD_STORED_PROGRAMS, 97201Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:06.668433Z</date>
+  <nanos>433000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:sp_helpdiagramdefinition</message>
+  <param>sp_helpdiagramdefinition, MD_STORED_PROGRAMS, 97301Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:07.419796900Z</date>
+  <nanos>796900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Multiple Limitations for Stored Procedure sp_helpdiagramdefinition</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@1a7c43fb</param>
+
+<record>
+  <date>2023-05-02T16:13:07.419796900Z</date>
+  <nanos>796900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'EXECUTE_AS' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_helpdiagramdefinition line 22 column 3</message>
+  <param>sp_helpdiagramdefinition, MD_STORED_PROGRAMS, 97301</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:07.419796900Z</date>
+  <nanos>796900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'IS_MEMBER' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_helpdiagramdefinition line 24 column 19</message>
+  <param>sp_helpdiagramdefinition, MD_STORED_PROGRAMS, 97301</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:07.419796900Z</date>
+  <nanos>796900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'REVERT' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_helpdiagramdefinition line 27 column 3</message>
+  <param>sp_helpdiagramdefinition, MD_STORED_PROGRAMS, 97301</param>
+
+</record>
+</record>
+<record>
+  <date>2023-05-02T16:13:07.424950500Z</date>
+  <nanos>950500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted sp_helpdiagramdefinition in 0 seconds</message>
+  <param>sp_helpdiagramdefinition, MD_STORED_PROGRAMS, 97301Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:07.825892700Z</date>
+  <nanos>892700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:sp_helpdiagrams</message>
+  <param>sp_helpdiagrams, MD_STORED_PROGRAMS, 97401Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:08.483962200Z</date>
+  <nanos>962200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Multiple Limitations for Stored Procedure sp_helpdiagrams</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@331aeabb</param>
+
+<record>
+  <date>2023-05-02T16:13:08.483896500Z</date>
+  <nanos>896500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'EXECUTE_AS' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_helpdiagrams line 11 column 3</message>
+  <param>sp_helpdiagrams, MD_STORED_PROGRAMS, 97401</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:08.483962200Z</date>
+  <nanos>962200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'IS_MEMBER' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_helpdiagrams line 13 column 32</message>
+  <param>sp_helpdiagrams, MD_STORED_PROGRAMS, 97401</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:08.483962200Z</date>
+  <nanos>962200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'REVERT' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_helpdiagrams line 14 column 3</message>
+  <param>sp_helpdiagrams, MD_STORED_PROGRAMS, 97401</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:08.483962200Z</date>
+  <nanos>962200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'DB_NAME' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_helpdiagrams line 16 column 17</message>
+  <param>sp_helpdiagrams, MD_STORED_PROGRAMS, 97401</param>
+
+</record>
+</record>
+<record>
+  <date>2023-05-02T16:13:08.489618900Z</date>
+  <nanos>618900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted sp_helpdiagrams in 0 seconds</message>
+  <param>sp_helpdiagrams, MD_STORED_PROGRAMS, 97401Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:08.607859100Z</date>
+  <nanos>859100</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:sp_renamediagram</message>
+  <param>sp_renamediagram, MD_STORED_PROGRAMS, 97501Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:09.789101500Z</date>
+  <nanos>101500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Multiple Limitations for Stored Procedure sp_renamediagram</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@79aade52</param>
+
+<record>
+  <date>2023-05-02T16:13:09.789101500Z</date>
+  <nanos>101500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'EXECUTE_AS' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_renamediagram line 25 column 3</message>
+  <param>sp_renamediagram, MD_STORED_PROGRAMS, 97501</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:09.789101500Z</date>
+  <nanos>101500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'IS_MEMBER' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_renamediagram line 27 column 19</message>
+  <param>sp_renamediagram, MD_STORED_PROGRAMS, 97501</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:09.789101500Z</date>
+  <nanos>101500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'REVERT' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_renamediagram line 30 column 3</message>
+  <param>sp_renamediagram, MD_STORED_PROGRAMS, 97501</param>
+
+</record>
+</record>
+<record>
+  <date>2023-05-02T16:13:09.793980300Z</date>
+  <nanos>980300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted sp_renamediagram in 1 seconds</message>
+  <param>sp_renamediagram, MD_STORED_PROGRAMS, 97501Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:10.186566800Z</date>
+  <nanos>566800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:sp_upgraddiagrams</message>
+  <param>sp_upgraddiagrams, MD_STORED_PROGRAMS, 97601Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:11.660261700Z</date>
+  <nanos>261700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Multiple Limitations for Stored Procedure sp_upgraddiagrams</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@389b07f</param>
+
+<record>
+  <date>2023-05-02T16:13:11.660261700Z</date>
+  <nanos>261700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'OBJECT_ID' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_upgraddiagrams line 4 column 6</message>
+  <param>sp_upgraddiagrams, MD_STORED_PROGRAMS, 97601</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:11.660261700Z</date>
+  <nanos>261700</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'OBJECT_ID' encountered on Stored Procedure SoftLicenseManagement.dbo.sp_upgraddiagrams line 36 column 6</message>
+  <param>sp_upgraddiagrams, MD_STORED_PROGRAMS, 97601</param>
+
+</record>
+</record>
+<record>
+  <date>2023-05-02T16:13:11.663881500Z</date>
+  <nanos>881500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted sp_upgraddiagrams in 1 seconds</message>
+  <param>sp_upgraddiagrams, MD_STORED_PROGRAMS, 97601Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:11.762066200Z</date>
+  <nanos>66200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:usp_AddCustomer</message>
+  <param>usp_AddCustomer, MD_STORED_PROGRAMS, 97851Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:12.786447900Z</date>
+  <nanos>447900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted usp_AddCustomer in 1 seconds</message>
+  <param>usp_AddCustomer, MD_STORED_PROGRAMS, 97851Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:13.253024Z</date>
+  <nanos>24000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:usp_AddLicense</message>
+  <param>usp_AddLicense, MD_STORED_PROGRAMS, 97951Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:14.026213800Z</date>
+  <nanos>213800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted usp_AddLicense in 0 seconds</message>
+  <param>usp_AddLicense, MD_STORED_PROGRAMS, 97951Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:14.461596100Z</date>
+  <nanos>596100</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:usp_AddOwner</message>
+  <param>usp_AddOwner, MD_STORED_PROGRAMS, 98051Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:15.585927500Z</date>
+  <nanos>927500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted usp_AddOwner in 1 seconds</message>
+  <param>usp_AddOwner, MD_STORED_PROGRAMS, 98051Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:15.996334400Z</date>
+  <nanos>334400</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:usp_AddSoftware</message>
+  <param>usp_AddSoftware, MD_STORED_PROGRAMS, 98151Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:16.766335900Z</date>
+  <nanos>335900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted usp_AddSoftware in 0 seconds</message>
+  <param>usp_AddSoftware, MD_STORED_PROGRAMS, 98151Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:17.193689Z</date>
+  <nanos>689000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:usp_Cross</message>
+  <param>usp_Cross, MD_STORED_PROGRAMS, 98251Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:17.606550100Z</date>
+  <nanos>550100</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.core.util.MultiLevelLogManager</class>
+  <message>Translation limitation 'CREATE' encountered on Stored Procedure SoftLicenseManagement.dbo.usp_Cross line 0 column 1</message>
+  <param>usp_Cross, MD_STORED_PROGRAMS, 98251</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:17.607939Z</date>
+  <nanos>939000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted usp_Cross in 0 seconds</message>
+  <param>usp_Cross, MD_STORED_PROGRAMS, 98251Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:17.943928200Z</date>
+  <nanos>928200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:usp_DeleteLicense</message>
+  <param>usp_DeleteLicense, MD_STORED_PROGRAMS, 98351Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:18.537194500Z</date>
+  <nanos>194500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted usp_DeleteLicense in 0 seconds</message>
+  <param>usp_DeleteLicense, MD_STORED_PROGRAMS, 98351Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:18.901678300Z</date>
+  <nanos>678300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:usp_EditLicense</message>
+  <param>usp_EditLicense, MD_STORED_PROGRAMS, 98451Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:19.564226Z</date>
+  <nanos>226000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted usp_EditLicense in 0 seconds</message>
+  <param>usp_EditLicense, MD_STORED_PROGRAMS, 98451Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:19.973249900Z</date>
+  <nanos>249900</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:usp_GetLicenses</message>
+  <param>usp_GetLicenses, MD_STORED_PROGRAMS, 98551Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:20.814463400Z</date>
+  <nanos>463400</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted usp_GetLicenses in 0 seconds</message>
+  <param>usp_GetLicenses, MD_STORED_PROGRAMS, 98551Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:21.147291800Z</date>
+  <nanos>291800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Attempting Convert:usp_GetLicensesExpireNextMonth</message>
+  <param>usp_GetLicensesExpireNextMonth, MD_STORED_PROGRAMS, 98651Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:22.049431300Z</date>
+  <nanos>431300</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Successfully Converted usp_GetLicensesExpireNextMonth in 0 seconds</message>
+  <param>usp_GetLicensesExpireNextMonth, MD_STORED_PROGRAMS, 98651Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:22.712083800Z</date>
+  <nanos>83800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+  <message>Convert completed in 44 seconds</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@112be84c</param>
+
+<record>
+  <date>2023-05-02T16:12:35.434769900Z</date>
+  <nanos>769900</nanos>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>Default value (getdate()) has been replaced with SYSDATE</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@39a591d9</param>
+
+<record>
+  <date>2023-05-02T16:12:35.434769900Z</date>
+  <nanos>769900</nanos>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>SoftLicenseManagement.Licenses.PaymentDate</message>
+  <param>Licenses, MD_TABLES, 90701Convert</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:12:35.434769900Z</date>
+  <nanos>769900</nanos>
+  <level>INFO</level>
+  <class>oracle.dbtools.migration.convert.ConverterWorker</class>
+  <message>SoftLicenseManagement.LicensesHistory.PaymentDate</message>
+  <param>LicensesHistory, MD_TABLES, 92051Convert</param>
+
+</record>
+</record>
+</record>
+<record>
+  <date>2023-05-02T16:13:27.604497Z</date>
+  <nanos>497000</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.generate.GenerateWorker</class>
+  <message>Trigger 'trg_InsertOwners' has a language id of 'MSTSQL' so will not output for generation</message>
+  <key>Generate.TRIGGERNOTCONVERTED</key>
+  <catalog>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</catalog>
+  <param>trg_InsertOwners</param>
+  <param>MSTSQL</param>
+  <param>trg_InsertOwners, MD_TRIGGERS, 90601Generate</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:27.622715500Z</date>
+  <nanos>715500</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.generate.GenerateWorker</class>
+  <message>Trigger 'Licenses_INSERT' has a language id of 'MSTSQL' so will not output for generation</message>
+  <key>Generate.TRIGGERNOTCONVERTED</key>
+  <catalog>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</catalog>
+  <param>Licenses_INSERT</param>
+  <param>MSTSQL</param>
+  <param>Licenses_INSERT, MD_TRIGGERS, 91951Generate</param>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:39.264343800Z</date>
+  <nanos>343800</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>SEVERE</level>
+  <class>oracle.dbtools.migration.workbench.core.logging.MigrationLogUtil</class>
+  <message>Generation phase
+ORA-00942: таблица или представление пользователя не существует
+</message>
+  <param>oracle.dbtools.metadata.persistence.PersistableObject.doUpdate(PersistableObject.java:364)</param>
+  <param>oracle.dbtools.metadata.persistence.PersistableObject.save(PersistableObject.java:186)</param>
+  <param>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask.doGenerate(FullMigrateTask.java:1303)</param>
+  <param>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask.doMaskBasedActions(FullMigrateTask.java:437)</param>
+  <param>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask.doWork(FullMigrateTask.java:321)</param>
+  <param>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask.doWork(FullMigrateTask.java:154)</param>
+  <param>oracle.dbtools.raptor.backgroundTask.RaptorTask.call(RaptorTask.java:199)</param>
+  <param>java.base/java.util.concurrent.FutureTask.run(Unknown Source)</param>
+  <param>oracle.dbtools.raptor.backgroundTask.RaptorTaskManager$RaptorFutureTask.run(RaptorTaskManager.java:702)</param>
+  <param>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)</param>
+  <param>java.base/java.util.concurrent.FutureTask.run(Unknown Source)</param>
+  <param>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)</param>
+  <param>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)</param>
+  <param>java.base/java.lang.Thread.run(Unknown Source)</param>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@66fc1c30</param>
+  <exception>
+    <message>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask$FullMigrateTaskException: Generation phase
+ORA-00942: таблица или представление пользователя не существует
+</message>
+    <frame>
+      <class>oracle.dbtools.metadata.persistence.PersistableObject</class>
+      <line>364</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.metadata.persistence.PersistableObject</class>
+      <line>186</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+      <line>1303</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+      <line>437</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+      <line>321</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+      <line>154</line>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.raptor.backgroundTask.RaptorTask</class>
+      <line>199</line>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.FutureTask</class>
+    </frame>
+    <frame>
+      <class>oracle.dbtools.raptor.backgroundTask.RaptorTaskManager$RaptorFutureTask</class>
+      <line>702</line>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.Executors$RunnableAdapter</class>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.FutureTask</class>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.ThreadPoolExecutor</class>
+    </frame>
+    <frame>
+      <class>java.util.concurrent.ThreadPoolExecutor$Worker</class>
+    </frame>
+    <frame>
+      <class>java.lang.Thread</class>
+    </frame>
+  </exception>
+
+</record>
+<record>
+  <date>2023-05-02T16:13:39.273236200Z</date>
+  <nanos>236200</nanos>
+  <logger>oracle.dbtools.migration.workbench.core.MigrationLogResourceBundle</logger>
+  <level>WARNING</level>
+  <class>oracle.dbtools.migration.workbench.core.ui.FullMigrateTask</class>
+  <message>Generated script run has failures: FAILED : Database Migration : FAILED</message>
+  <param>oracle.dbtools.migration.workbench.core.logging.LogInfo@67f2383e</param>
+
+</record>
+</log>

@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UniversityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AUDITORIUM">
+    <Key>
+      <PropertyRef Name="AUDITORIUM" />
+    </Key>
+    <Property Name="AUDITORIUM" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="AUDITORIUM_NAME" Type="nvarchar" MaxLength="200" />
+    <Property Name="AUDITORIUM_CAPACITY" Type="int" />
+    <Property Name="AUDITORIUM_TYPE" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="AUDITORIUM_TYPE">
+    <Key>
+      <PropertyRef Name="AUDITORIUM_TYPE" />
+    </Key>
+    <Property Name="AUDITORIUM_TYPE" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="AUDITORIUM_TYPENAME" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FACULTY">
+    <Key>
+      <PropertyRef Name="FACULTY" />
+    </Key>
+    <Property Name="FACULTY" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="FACULTY_NAME" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PULPIT">
+    <Key>
+      <PropertyRef Name="PULPIT" />
+    </Key>
+    <Property Name="PULPIT" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="PULPIT_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="FACULTY" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="STUDENT">
+    <Key>
+      <PropertyRef Name="STUDENT" />
+    </Key>
+    <Property Name="STUDENT" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="STUDENT_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACULTY" Type="nchar" MaxLength="10" />
+    <Property Name="PHONE_NUMBER" Type="nchar" MaxLength="13" />
+    <Property Name="HOME_ADDRESS" Type="geography" />
+  </EntityType>
+  <EntityType Name="STUDENT_HISTORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STUDENT" Type="nchar" MaxLength="10" />
+    <Property Name="STUDENT_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACULTY" Type="nchar" MaxLength="10" />
+    <Property Name="PHONE_NUMBER" Type="nchar" MaxLength="13" />
+    <Property Name="OPERATION" Type="nchar" MaxLength="10" />
+    <Property Name="DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="STUDENT_MARK">
+    <Key>
+      <PropertyRef Name="STUDENT" />
+      <PropertyRef Name="SUBJECT" />
+    </Key>
+    <Property Name="STUDENT" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="SUBJECT" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MARK" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SUBJECT">
+    <Key>
+      <PropertyRef Name="SUBJECT" />
+    </Key>
+    <Property Name="SUBJECT" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="SUBJECT_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PULPIT" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TEACHER">
+    <Key>
+      <PropertyRef Name="TEACHER" />
+    </Key>
+    <Property Name="TEACHER" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TEACHER_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PULPIT" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'University.dbo.PulpitsOnFaculty' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PulpitsOnFaculty">
+    <Key>
+      <PropertyRef Name="FACULTY" />
+    </Key>
+    <Property Name="FACULTY" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="FACULTY_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PULPIT_NAME" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'University.dbo.TeachersOnFaculty' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TeachersOnFaculty">
+    <Key>
+      <PropertyRef Name="TEACHER" />
+    </Key>
+    <Property Name="TEACHER" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TEACHER_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="FACULTY_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PULPIT_NAME" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'University.dbo.TeachersSubjects' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TeachersSubjects">
+    <Key>
+      <PropertyRef Name="TEACHER" />
+    </Key>
+    <Property Name="TEACHER" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TEACHER_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="SUBJECT_NAME" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_AUDITORIUM_AUDITORIUM_TYPE">
+    <End Role="AUDITORIUM_TYPE" Type="Self.AUDITORIUM_TYPE" Multiplicity="0..1" />
+    <End Role="AUDITORIUM" Type="Self.AUDITORIUM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AUDITORIUM_TYPE">
+        <PropertyRef Name="AUDITORIUM_TYPE" />
+      </Principal>
+      <Dependent Role="AUDITORIUM">
+        <PropertyRef Name="AUDITORIUM_TYPE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PULPIT_FACULTY">
+    <End Role="FACULTY" Type="Self.FACULTY" Multiplicity="0..1" />
+    <End Role="PULPIT" Type="Self.PULPIT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FACULTY">
+        <PropertyRef Name="FACULTY" />
+      </Principal>
+      <Dependent Role="PULPIT">
+        <PropertyRef Name="FACULTY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_FACULTY">
+    <End Role="FACULTY" Type="Self.FACULTY" Multiplicity="0..1" />
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FACULTY">
+        <PropertyRef Name="FACULTY" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="FACULTY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_MARK_STUDENT">
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="1" />
+    <End Role="STUDENT_MARK" Type="Self.STUDENT_MARK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="STUDENT" />
+      </Principal>
+      <Dependent Role="STUDENT_MARK">
+        <PropertyRef Name="STUDENT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_MARK_SUBJECT">
+    <End Role="SUBJECT" Type="Self.SUBJECT" Multiplicity="1" />
+    <End Role="STUDENT_MARK" Type="Self.STUDENT_MARK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBJECT">
+        <PropertyRef Name="SUBJECT" />
+      </Principal>
+      <Dependent Role="STUDENT_MARK">
+        <PropertyRef Name="SUBJECT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SUBJECT_PULPIT">
+    <End Role="PULPIT" Type="Self.PULPIT" Multiplicity="0..1" />
+    <End Role="SUBJECT" Type="Self.SUBJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PULPIT">
+        <PropertyRef Name="PULPIT" />
+      </Principal>
+      <Dependent Role="SUBJECT">
+        <PropertyRef Name="PULPIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TEACHER_PULPIT">
+    <End Role="PULPIT" Type="Self.PULPIT" Multiplicity="0..1" />
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PULPIT">
+        <PropertyRef Name="PULPIT" />
+      </Principal>
+      <Dependent Role="TEACHER">
+        <PropertyRef Name="PULPIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="avgMark" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+    <Parameter Name="student" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="avgMarkFaculty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="faculty" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="avgMarkFacultyStudents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="faculty" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="avgMarkOnFaculty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+    <Parameter Name="faculty" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="countAuditoriumByCapacity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="capacity" Type="int" Mode="In" />
+  </Function>
+  <Function Name="createMark" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="student" Type="nchar" Mode="In" />
+    <Parameter Name="subject" Type="nchar" Mode="In" />
+    <Parameter Name="mark" Type="int" Mode="In" />
+  </Function>
+  <Function Name="deleteMark" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="student" Type="nchar" Mode="In" />
+    <Parameter Name="subject" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="WriteToFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="filename" Type="nvarchar" Mode="In" />
+    <Parameter Name="data" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="UniversityModelStoreContainer">
+    <EntitySet Name="AUDITORIUM" EntityType="Self.AUDITORIUM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AUDITORIUM_TYPE" EntityType="Self.AUDITORIUM_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FACULTY" EntityType="Self.FACULTY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PULPIT" EntityType="Self.PULPIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENT" EntityType="Self.STUDENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENT_HISTORY" EntityType="Self.STUDENT_HISTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENT_MARK" EntityType="Self.STUDENT_MARK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SUBJECT" EntityType="Self.SUBJECT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEACHER" EntityType="Self.TEACHER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PulpitsOnFaculty" EntityType="Self.PulpitsOnFaculty" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PulpitsOnFaculty].[FACULTY] AS [FACULTY], 
+    [PulpitsOnFaculty].[FACULTY_NAME] AS [FACULTY_NAME], 
+    [PulpitsOnFaculty].[PULPIT_NAME] AS [PULPIT_NAME]
+    FROM [dbo].[PulpitsOnFaculty] AS [PulpitsOnFaculty]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TeachersOnFaculty" EntityType="Self.TeachersOnFaculty" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TeachersOnFaculty].[TEACHER] AS [TEACHER], 
+    [TeachersOnFaculty].[TEACHER_NAME] AS [TEACHER_NAME], 
+    [TeachersOnFaculty].[FACULTY_NAME] AS [FACULTY_NAME], 
+    [TeachersOnFaculty].[PULPIT_NAME] AS [PULPIT_NAME]
+    FROM [dbo].[TeachersOnFaculty] AS [TeachersOnFaculty]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TeachersSubjects" EntityType="Self.TeachersSubjects" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TeachersSubjects].[TEACHER] AS [TEACHER], 
+    [TeachersSubjects].[TEACHER_NAME] AS [TEACHER_NAME], 
+    [TeachersSubjects].[SUBJECT_NAME] AS [SUBJECT_NAME]
+    FROM [dbo].[TeachersSubjects] AS [TeachersSubjects]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AUDITORIUM_AUDITORIUM_TYPE" Association="Self.FK_AUDITORIUM_AUDITORIUM_TYPE">
+      <End Role="AUDITORIUM_TYPE" EntitySet="AUDITORIUM_TYPE" />
+      <End Role="AUDITORIUM" EntitySet="AUDITORIUM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PULPIT_FACULTY" Association="Self.FK_PULPIT_FACULTY">
+      <End Role="FACULTY" EntitySet="FACULTY" />
+      <End Role="PULPIT" EntitySet="PULPIT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_FACULTY" Association="Self.FK_STUDENT_FACULTY">
+      <End Role="FACULTY" EntitySet="FACULTY" />
+      <End Role="STUDENT" EntitySet="STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_MARK_STUDENT" Association="Self.FK_STUDENT_MARK_STUDENT">
+      <End Role="STUDENT" EntitySet="STUDENT" />
+      <End Role="STUDENT_MARK" EntitySet="STUDENT_MARK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_MARK_SUBJECT" Association="Self.FK_STUDENT_MARK_SUBJECT">
+      <End Role="SUBJECT" EntitySet="SUBJECT" />
+      <End Role="STUDENT_MARK" EntitySet="STUDENT_MARK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SUBJECT_PULPIT" Association="Self.FK_SUBJECT_PULPIT">
+      <End Role="PULPIT" EntitySet="PULPIT" />
+      <End Role="SUBJECT" EntitySet="SUBJECT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TEACHER_PULPIT" Association="Self.FK_TEACHER_PULPIT">
+      <End Role="PULPIT" EntitySet="PULPIT" />
+      <End Role="TEACHER" EntitySet="TEACHER" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

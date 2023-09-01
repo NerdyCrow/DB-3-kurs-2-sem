@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PublishingHouseModelContainer" CdmEntityContainer="PublishingHouseEntities">
+    <EntitySetMapping Name="Authors">
+      <EntityTypeMapping TypeName="PublishingHouseModel.Author">
+        <MappingFragment StoreEntitySet="Authors">
+          <ScalarProperty Name="Author_ID" ColumnName="Author_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Date_of_birth" ColumnName="Date_of_birth" />
+          <ScalarProperty Name="Bio" ColumnName="Bio" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="PublishingHouseModel.Book">
+        <MappingFragment StoreEntitySet="Books">
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author_id" ColumnName="Author_id" />
+          <ScalarProperty Name="Publication_date" ColumnName="Publication_date" />
+          <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Publisher_ID" ColumnName="Publisher_ID" />
+          <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="PublishingHouseModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+          <ScalarProperty Name="Category_name" ColumnName="Category_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="PublishingHouseModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact_info" ColumnName="Contact_info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Distributors">
+      <EntityTypeMapping TypeName="PublishingHouseModel.Distributor">
+        <MappingFragment StoreEntitySet="Distributors">
+          <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact_info" ColumnName="Contact_info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventories">
+      <EntityTypeMapping TypeName="PublishingHouseModel.Inventory">
+        <MappingFragment StoreEntitySet="Inventory">
+          <ScalarProperty Name="Inventory_ID" ColumnName="Inventory_ID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="Copies_in_stock" ColumnName="Copies_in_stock" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="PublishingHouseModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="Order_date" ColumnName="Order_date" />
+          <ScalarProperty Name="Copies_ordered" ColumnName="Copies_ordered" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Publishers">
+      <EntityTypeMapping TypeName="PublishingHouseModel.Publisher">
+        <MappingFragment StoreEntitySet="Publishers">
+          <ScalarProperty Name="Publisher_ID" ColumnName="Publisher_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact_info" ColumnName="Contact_info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="PublishingHouseModel.Sale">
+        <MappingFragment StoreEntitySet="Sales">
+          <ScalarProperty Name="Sales_ID" ColumnName="Sales_ID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="Sales_date" ColumnName="Sales_date" />
+          <ScalarProperty Name="Copies_sold" ColumnName="Copies_sold" />
+          <ScalarProperty Name="Revenue" ColumnName="Revenue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books_by_category">
+      <EntityTypeMapping TypeName="PublishingHouseModel.Books_by_category">
+        <MappingFragment StoreEntitySet="Books_by_category">
+          <ScalarProperty Name="Category_name" ColumnName="Category_name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author_id" ColumnName="Author_id" />
+          <ScalarProperty Name="Publication_date" ColumnName="Publication_date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Publisher_ID" ColumnName="Publisher_ID" />
+          <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books_by_publisher">
+      <EntityTypeMapping TypeName="PublishingHouseModel.Books_by_publisher">
+        <MappingFragment StoreEntitySet="Books_by_publisher">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author_id" ColumnName="Author_id" />
+          <ScalarProperty Name="Publication_date" ColumnName="Publication_date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+          <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BooksWithAuthorsAndCategories">
+      <EntityTypeMapping TypeName="PublishingHouseModel.BooksWithAuthorsAndCategory">
+        <MappingFragment StoreEntitySet="BooksWithAuthorsAndCategories">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Category_name" ColumnName="Category_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="Хранилище PublishingHouseModel.fnGetBooksByCategory" FunctionImportName="fnGetBooksByCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PublishingHouseModel.fnGetBooksByCategory_Result">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author_id" ColumnName="Author_id" />
+          <ScalarProperty Name="Publication_date" ColumnName="Publication_date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Publisher_ID" ColumnName="Publisher_ID" />
+          <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetBooksByCategory" FunctionName="Хранилище PublishingHouseModel.spGetBooksByCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PublishingHouseModel.spGetBooksByCategory_Result">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author_id" ColumnName="Author_id" />
+          <ScalarProperty Name="Publication_date" ColumnName="Publication_date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Publisher_ID" ColumnName="Publisher_ID" />
+          <ScalarProperty Name="Distributor_ID" ColumnName="Distributor_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUpdateInventory" FunctionName="Хранилище PublishingHouseModel.spUpdateInventory" />
+    <FunctionImportMapping FunctionImportName="spUpdateOrders" FunctionName="Хранилище PublishingHouseModel.spUpdateOrders" />
+  </EntityContainerMapping>
+</Mapping>

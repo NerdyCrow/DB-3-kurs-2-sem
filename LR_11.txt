@@ -1,0 +1,61 @@
+/*INDEXES*/
+CREATE INDEX product_name ON products (product_name);
+CREATE INDEX category_name ON categories (category_name);
+CREATE INDEX store_name ON stores (store_name);
+CREATE INDEX company_name ON customers (company_name);
+
+/* VIEWS */
+
+CREATE VIEW GetLicenses AS select * 
+from Licenses;
+
+select * from GetLicenses;
+
+create view GetAllCustomersSort as select c.company_name, c.abbreviation from customers c group by c.company_name, c.abbreviation;
+
+select * from GetAllCustomersSort;
+
+drop view GetProductsSortByCategories;
+
+
+/*TRIGGERS*/
+
+-- Триггер для таблицы products при вставке
+CREATE TRIGGER Contacts_Insert_trg AFTER INSERT ON Contacts
+BEGIN
+    INSERT INTO Contacts (Id, Name, Email, Address, Phone)
+VALUES (20, 'trigger', 'trigger@example.com', '123 Main St', '544-1234');
+END;
+
+INSERT INTO Contacts (Id, Name, Email, Address, Phone)
+VALUES (3, 'Test1', 'test1@example.com', '123 Main St', '544-1234');
+
+
+select * from products;
+
+
+
+--посмотреть индексы
+SELECT name, tbl_name, sql FROM sqlite_master WHERE type = 'index';
+--посмотреть представления
+SELECT name, sql FROM sqlite_master WHERE type = 'view';
+--посмотреть тригеры
+SELECT name, tbl_name, sql FROM sqlite_master WHERE type = 'trigger';
+
+
+--7 задание (транзакция)
+
+Commit
+BEGIN TRANSACTION;
+
+UPDATE Software
+SET Name = 'John Doeee'
+WHERE Id = 20;
+
+INSERT INTO Software (Id,Name, Version, Price, OwnerId,DateCreated)
+VALUES (21,'Test', '12', 15.25, 1,'25.02.2023');
+
+DELETE FROM Contacts
+WHERE Id = 20;
+
+COMMIT;

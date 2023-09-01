@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UniversityModelStoreContainer" CdmEntityContainer="UniversityEntities">
+    <EntitySetMapping Name="AUDITORIUM">
+      <EntityTypeMapping TypeName="UniversityModel.AUDITORIUM">
+        <MappingFragment StoreEntitySet="AUDITORIUM">
+          <ScalarProperty Name="AUDITORIUM1" ColumnName="AUDITORIUM" />
+          <ScalarProperty Name="AUDITORIUM_NAME" ColumnName="AUDITORIUM_NAME" />
+          <ScalarProperty Name="AUDITORIUM_CAPACITY" ColumnName="AUDITORIUM_CAPACITY" />
+          <ScalarProperty Name="AUDITORIUM_TYPE" ColumnName="AUDITORIUM_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUDITORIUM_TYPE">
+      <EntityTypeMapping TypeName="UniversityModel.AUDITORIUM_TYPE">
+        <MappingFragment StoreEntitySet="AUDITORIUM_TYPE">
+          <ScalarProperty Name="AUDITORIUM_TYPE1" ColumnName="AUDITORIUM_TYPE" />
+          <ScalarProperty Name="AUDITORIUM_TYPENAME" ColumnName="AUDITORIUM_TYPENAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACULTY">
+      <EntityTypeMapping TypeName="UniversityModel.FACULTY">
+        <MappingFragment StoreEntitySet="FACULTY">
+          <ScalarProperty Name="FACULTY1" ColumnName="FACULTY" />
+          <ScalarProperty Name="FACULTY_NAME" ColumnName="FACULTY_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PULPIT">
+      <EntityTypeMapping TypeName="UniversityModel.PULPIT">
+        <MappingFragment StoreEntitySet="PULPIT">
+          <ScalarProperty Name="PULPIT1" ColumnName="PULPIT" />
+          <ScalarProperty Name="PULPIT_NAME" ColumnName="PULPIT_NAME" />
+          <ScalarProperty Name="FACULTY" ColumnName="FACULTY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENT">
+      <EntityTypeMapping TypeName="UniversityModel.STUDENT">
+        <MappingFragment StoreEntitySet="STUDENT">
+          <ScalarProperty Name="STUDENT1" ColumnName="STUDENT" />
+          <ScalarProperty Name="STUDENT_NAME" ColumnName="STUDENT_NAME" />
+          <ScalarProperty Name="FACULTY" ColumnName="FACULTY" />
+          <ScalarProperty Name="PHONE_NUMBER" ColumnName="PHONE_NUMBER" />
+          <ScalarProperty Name="HOME_ADDRESS" ColumnName="HOME_ADDRESS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENT_HISTORY">
+      <EntityTypeMapping TypeName="UniversityModel.STUDENT_HISTORY">
+        <MappingFragment StoreEntitySet="STUDENT_HISTORY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="STUDENT" ColumnName="STUDENT" />
+          <ScalarProperty Name="STUDENT_NAME" ColumnName="STUDENT_NAME" />
+          <ScalarProperty Name="FACULTY" ColumnName="FACULTY" />
+          <ScalarProperty Name="PHONE_NUMBER" ColumnName="PHONE_NUMBER" />
+          <ScalarProperty Name="OPERATION" ColumnName="OPERATION" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENT_MARK">
+      <EntityTypeMapping TypeName="UniversityModel.STUDENT_MARK">
+        <MappingFragment StoreEntitySet="STUDENT_MARK">
+          <ScalarProperty Name="STUDENT" ColumnName="STUDENT" />
+          <ScalarProperty Name="SUBJECT" ColumnName="SUBJECT" />
+          <ScalarProperty Name="MARK" ColumnName="MARK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBJECT">
+      <EntityTypeMapping TypeName="UniversityModel.SUBJECT">
+        <MappingFragment StoreEntitySet="SUBJECT">
+          <ScalarProperty Name="SUBJECT1" ColumnName="SUBJECT" />
+          <ScalarProperty Name="SUBJECT_NAME" ColumnName="SUBJECT_NAME" />
+          <ScalarProperty Name="PULPIT" ColumnName="PULPIT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="UniversityModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEACHER">
+      <EntityTypeMapping TypeName="UniversityModel.TEACHER">
+        <MappingFragment StoreEntitySet="TEACHER">
+          <ScalarProperty Name="TEACHER1" ColumnName="TEACHER" />
+          <ScalarProperty Name="TEACHER_NAME" ColumnName="TEACHER_NAME" />
+          <ScalarProperty Name="PULPIT" ColumnName="PULPIT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PulpitsOnFaculty">
+      <EntityTypeMapping TypeName="UniversityModel.PulpitsOnFaculty">
+        <MappingFragment StoreEntitySet="PulpitsOnFaculty">
+          <ScalarProperty Name="FACULTY" ColumnName="FACULTY" />
+          <ScalarProperty Name="FACULTY_NAME" ColumnName="FACULTY_NAME" />
+          <ScalarProperty Name="PULPIT_NAME" ColumnName="PULPIT_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeachersOnFaculty">
+      <EntityTypeMapping TypeName="UniversityModel.TeachersOnFaculty">
+        <MappingFragment StoreEntitySet="TeachersOnFaculty">
+          <ScalarProperty Name="TEACHER" ColumnName="TEACHER" />
+          <ScalarProperty Name="TEACHER_NAME" ColumnName="TEACHER_NAME" />
+          <ScalarProperty Name="FACULTY_NAME" ColumnName="FACULTY_NAME" />
+          <ScalarProperty Name="PULPIT_NAME" ColumnName="PULPIT_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeachersSubjects">
+      <EntityTypeMapping TypeName="UniversityModel.TeachersSubjects">
+        <MappingFragment StoreEntitySet="TeachersSubjects">
+          <ScalarProperty Name="TEACHER" ColumnName="TEACHER" />
+          <ScalarProperty Name="TEACHER_NAME" ColumnName="TEACHER_NAME" />
+          <ScalarProperty Name="SUBJECT_NAME" ColumnName="SUBJECT_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="avgMarkFaculty" FunctionName="UniversityModel.Store.avgMarkFaculty">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UniversityModel.avgMarkFaculty_Result">
+          <ScalarProperty Name="STUDENT" ColumnName="STUDENT" />
+          <ScalarProperty Name="STUDENT_NAME" ColumnName="STUDENT_NAME" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="avgMarkFacultyStudents" FunctionName="UniversityModel.Store.avgMarkFacultyStudents">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UniversityModel.avgMarkFacultyStudents_Result">
+          <ScalarProperty Name="STUDENT" ColumnName="STUDENT" />
+          <ScalarProperty Name="STUDENT_NAME" ColumnName="STUDENT_NAME" />
+          <ScalarProperty Name="MARK" ColumnName="MARK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="createMark" FunctionName="UniversityModel.Store.createMark" />
+    <FunctionImportMapping FunctionImportName="deleteMark" FunctionName="UniversityModel.Store.deleteMark" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="UniversityModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="UniversityModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="UniversityModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="UniversityModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UniversityModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="UniversityModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UniversityModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="UniversityModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="UniversityModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="WriteToFile" FunctionName="UniversityModel.Store.WriteToFile" />
+  </EntityContainerMapping>
+</Mapping>

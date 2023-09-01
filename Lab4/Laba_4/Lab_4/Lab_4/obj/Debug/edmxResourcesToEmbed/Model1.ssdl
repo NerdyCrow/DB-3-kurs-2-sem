@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище PersonnelModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="idDep" />
+    </Key>
+    <Property Name="idDep" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="department" Type="varchar" MaxLength="50" />
+    <Property Name="leader" Type="varchar" MaxLength="50" />
+    <Property Name="phoneNum" Type="varchar" MaxLength="20" />
+    <Property Name="location" Type="geography" />
+  </EntityType>
+  <EntityType Name="Official_information">
+    <Key>
+      <PropertyRef Name="idEmployee" />
+    </Key>
+    <Property Name="idEmployee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="personalNum" Type="int" />
+    <Property Name="surname" Type="varchar" MaxLength="50" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="patronymic" Type="varchar" MaxLength="50" />
+    <Property Name="idDep" Type="int" />
+    <Property Name="education" Type="varchar" MaxLength="50" />
+    <Property Name="experience" Type="varchar" MaxLength="50" />
+    <Property Name="phoneNum" Type="varchar" MaxLength="20" />
+    <Property Name="salary" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Personal_information">
+    <Key>
+      <PropertyRef Name="personalNum" />
+    </Key>
+    <Property Name="personalNum" Type="int" Nullable="false" />
+    <Property Name="placeBirth" Type="varchar" MaxLength="25" />
+    <Property Name="passport" Type="varchar" MaxLength="30" />
+    <Property Name="address" Type="varchar" MaxLength="50" />
+    <Property Name="regAddress" Type="varchar" MaxLength="50" />
+    <Property Name="maritalStat" Type="varchar" MaxLength="20" />
+    <Property Name="children" Type="int" />
+    <Property Name="dateBirth" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Vacancy">
+    <Key>
+      <PropertyRef Name="idVacancy" />
+    </Key>
+    <Property Name="idVacancy" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idDep" Type="int" />
+    <Property Name="salary" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <Association Name="idDep_ofInf_FK">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Official_information" Type="Self.Official_information" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="idDep" />
+      </Principal>
+      <Dependent Role="Official_information">
+        <PropertyRef Name="idDep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="idDep_vac_FK">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Vacancy" Type="Self.Vacancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="idDep" />
+      </Principal>
+      <Dependent Role="Vacancy">
+        <PropertyRef Name="idDep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="personalNum_FK">
+    <End Role="Personal_information" Type="Self.Personal_information" Multiplicity="0..1" />
+    <End Role="Official_information" Type="Self.Official_information" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal_information">
+        <PropertyRef Name="personalNum" />
+      </Principal>
+      <Dependent Role="Official_information">
+        <PropertyRef Name="personalNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище PersonnelModelContainer">
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Official_information" EntityType="Self.Official_information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personal_information" EntityType="Self.Personal_information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vacancy" EntityType="Self.Vacancy" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="idDep_ofInf_FK" Association="Self.idDep_ofInf_FK">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Official_information" EntitySet="Official_information" />
+    </AssociationSet>
+    <AssociationSet Name="idDep_vac_FK" Association="Self.idDep_vac_FK">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Vacancy" EntitySet="Vacancy" />
+    </AssociationSet>
+    <AssociationSet Name="personalNum_FK" Association="Self.personalNum_FK">
+      <End Role="Personal_information" EntitySet="Personal_information" />
+      <End Role="Official_information" EntitySet="Official_information" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

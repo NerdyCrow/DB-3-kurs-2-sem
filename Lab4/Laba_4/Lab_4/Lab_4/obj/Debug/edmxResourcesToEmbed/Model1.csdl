@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PersonnelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="idDep" />
+    </Key>
+    <Property Name="idDep" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="department1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="leader" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phoneNum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="location" Type="Geography" />
+    <NavigationProperty Name="Official_information" Relationship="Self.idDep_ofInf_FK" FromRole="Department" ToRole="Official_information" />
+    <NavigationProperty Name="Vacancy" Relationship="Self.idDep_vac_FK" FromRole="Department" ToRole="Vacancy" />
+  </EntityType>
+  <EntityType Name="Official_information">
+    <Key>
+      <PropertyRef Name="idEmployee" />
+    </Key>
+    <Property Name="idEmployee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="personalNum" Type="Int32" />
+    <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idDep" Type="Int32" />
+    <Property Name="education" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="experience" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phoneNum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="salary" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Department" Relationship="Self.idDep_ofInf_FK" FromRole="Official_information" ToRole="Department" />
+    <NavigationProperty Name="Personal_information" Relationship="Self.personalNum_FK" FromRole="Official_information" ToRole="Personal_information" />
+  </EntityType>
+  <EntityType Name="Personal_information">
+    <Key>
+      <PropertyRef Name="personalNum" />
+    </Key>
+    <Property Name="personalNum" Type="Int32" Nullable="false" />
+    <Property Name="placeBirth" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="passport" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="regAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="maritalStat" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="children" Type="Int32" />
+    <Property Name="dateBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Official_information" Relationship="Self.personalNum_FK" FromRole="Personal_information" ToRole="Official_information" />
+  </EntityType>
+  <EntityType Name="Vacancy">
+    <Key>
+      <PropertyRef Name="idVacancy" />
+    </Key>
+    <Property Name="idVacancy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idDep" Type="Int32" />
+    <Property Name="salary" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Department" Relationship="Self.idDep_vac_FK" FromRole="Vacancy" ToRole="Department" />
+  </EntityType>
+  <Association Name="idDep_ofInf_FK">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Official_information" Type="Self.Official_information" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="idDep" />
+      </Principal>
+      <Dependent Role="Official_information">
+        <PropertyRef Name="idDep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="idDep_vac_FK">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Vacancy" Type="Self.Vacancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="idDep" />
+      </Principal>
+      <Dependent Role="Vacancy">
+        <PropertyRef Name="idDep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="personalNum_FK">
+    <End Role="Personal_information" Type="Self.Personal_information" Multiplicity="0..1" />
+    <End Role="Official_information" Type="Self.Official_information" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal_information">
+        <PropertyRef Name="personalNum" />
+      </Principal>
+      <Dependent Role="Official_information">
+        <PropertyRef Name="personalNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PersonnelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Department" EntityType="Self.Department" />
+    <EntitySet Name="Official_information" EntityType="Self.Official_information" />
+    <EntitySet Name="Personal_information" EntityType="Self.Personal_information" />
+    <EntitySet Name="Vacancy" EntityType="Self.Vacancy" />
+    <AssociationSet Name="idDep_ofInf_FK" Association="Self.idDep_ofInf_FK">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Official_information" EntitySet="Official_information" />
+    </AssociationSet>
+    <AssociationSet Name="idDep_vac_FK" Association="Self.idDep_vac_FK">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Vacancy" EntitySet="Vacancy" />
+    </AssociationSet>
+    <AssociationSet Name="personalNum_FK" Association="Self.personalNum_FK">
+      <End Role="Personal_information" EntitySet="Personal_information" />
+      <End Role="Official_information" EntitySet="Official_information" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

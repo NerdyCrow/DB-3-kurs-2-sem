@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище PublishingHouseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Authors">
+    <Key>
+      <PropertyRef Name="Author_ID" />
+    </Key>
+    <Property Name="Author_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date_of_birth" Type="date" Nullable="false" />
+    <Property Name="Bio" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Nationality" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Books">
+    <Key>
+      <PropertyRef Name="ISBN" />
+    </Key>
+    <Property Name="ISBN" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Author_id" Type="int" Nullable="false" />
+    <Property Name="Publication_date" Type="date" Nullable="false" />
+    <Property Name="Category_ID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Publisher_ID" Type="int" Nullable="false" />
+    <Property Name="Distributor_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Category_ID" />
+    </Key>
+    <Property Name="Category_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category_name" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Customer_ID" />
+    </Key>
+    <Property Name="Customer_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Contact_info" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Distributors">
+    <Key>
+      <PropertyRef Name="Distributor_ID" />
+    </Key>
+    <Property Name="Distributor_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Contact_info" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Inventory">
+    <Key>
+      <PropertyRef Name="Inventory_ID" />
+    </Key>
+    <Property Name="Inventory_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ISBN" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Copies_in_stock" Type="int" Nullable="false" />
+    <Property Name="Location" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+    </Key>
+    <Property Name="Order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ISBN" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Order_date" Type="date" Nullable="false" />
+    <Property Name="Copies_ordered" Type="int" Nullable="false" />
+    <Property Name="Customer_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Publishers">
+    <Key>
+      <PropertyRef Name="Publisher_ID" />
+    </Key>
+    <Property Name="Publisher_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Contact_info" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="Sales_ID" />
+    </Key>
+    <Property Name="Sales_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ISBN" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Sales_date" Type="date" Nullable="false" />
+    <Property Name="Copies_sold" Type="int" Nullable="false" />
+    <Property Name="Revenue" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "PublishingHouse.dbo.Books_by_category" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Books_by_category">
+    <Key>
+      <PropertyRef Name="Category_name" />
+      <PropertyRef Name="Title" />
+      <PropertyRef Name="Author_id" />
+      <PropertyRef Name="Publication_date" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="Publisher_ID" />
+      <PropertyRef Name="Distributor_ID" />
+    </Key>
+    <Property Name="Category_name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Author_id" Type="int" Nullable="false" />
+    <Property Name="Publication_date" Type="date" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Publisher_ID" Type="int" Nullable="false" />
+    <Property Name="Distributor_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "PublishingHouse.dbo.Books_by_publisher" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Books_by_publisher">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Title" />
+      <PropertyRef Name="Author_id" />
+      <PropertyRef Name="Publication_date" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="Category_ID" />
+      <PropertyRef Name="Distributor_ID" />
+    </Key>
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Author_id" Type="int" Nullable="false" />
+    <Property Name="Publication_date" Type="date" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Category_ID" Type="int" Nullable="false" />
+    <Property Name="Distributor_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "PublishingHouse.dbo.BooksWithAuthorsAndCategories" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="BooksWithAuthorsAndCategories">
+    <Key>
+      <PropertyRef Name="Title" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Category_name" />
+    </Key>
+    <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Category_name" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Books__Author_id__778AC167">
+    <End Role="Authors" Type="Self.Authors" Multiplicity="1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Authors">
+        <PropertyRef Name="Author_ID" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="Author_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Books__Category___74AE54BC">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="Category_ID" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="Category_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Books__Distribut__76969D2E">
+    <End Role="Distributors" Type="Self.Distributors" Multiplicity="1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distributors">
+        <PropertyRef Name="Distributor_ID" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="Distributor_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Books__Publisher__75A278F5">
+    <End Role="Publishers" Type="Self.Publishers" Multiplicity="1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Publishers">
+        <PropertyRef Name="Publisher_ID" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="Publisher_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inventory__ISBN__7D439ABD">
+    <End Role="Books" Type="Self.Books" Multiplicity="1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="ISBN" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="ISBN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__Customer__06CD04F7">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Customer_ID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__ISBN__05D8E0BE">
+    <End Role="Books" Type="Self.Books" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="ISBN" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="ISBN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sales__ISBN__7A672E12">
+    <End Role="Books" Type="Self.Books" Multiplicity="1" />
+    <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="ISBN" />
+      </Principal>
+      <Dependent Role="Sales">
+        <PropertyRef Name="ISBN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fnGetAverageRevenue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="decimal" />
+  <Function Name="fnGetAverageRevenueByCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="decimal">
+    <Parameter Name="categoryName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fnGetBooksByCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Category_name" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Author_id" Type="int" Nullable="false" />
+          <Property Name="Publication_date" Type="date" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Publisher_ID" Type="int" Nullable="false" />
+          <Property Name="Distributor_ID" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="spGetBooksByCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Category_name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spUpdateInventory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ISBN" Type="varchar" Mode="In" />
+    <Parameter Name="Copies_in_stock" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spUpdateOrders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ISBN" Type="varchar" Mode="In" />
+    <Parameter Name="Copies_ordered" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="Хранилище PublishingHouseModelContainer">
+    <EntitySet Name="Authors" EntityType="Self.Authors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Distributors" EntityType="Self.Distributors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inventory" EntityType="Self.Inventory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Publishers" EntityType="Self.Publishers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Books_by_category" EntityType="Self.Books_by_category" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Books_by_category].[Category_name] AS [Category_name], 
+    [Books_by_category].[Title] AS [Title], 
+    [Books_by_category].[Author_id] AS [Author_id], 
+    [Books_by_category].[Publication_date] AS [Publication_date], 
+    [Books_by_category].[Description] AS [Description], 
+    [Books_by_category].[Publisher_ID] AS [Publisher_ID], 
+    [Books_by_category].[Distributor_ID] AS [Distributor_ID]
+    FROM [dbo].[Books_by_category] AS [Books_by_category]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Books_by_publisher" EntityType="Self.Books_by_publisher" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Books_by_publisher].[Name] AS [Name], 
+    [Books_by_publisher].[Title] AS [Title], 
+    [Books_by_publisher].[Author_id] AS [Author_id], 
+    [Books_by_publisher].[Publication_date] AS [Publication_date], 
+    [Books_by_publisher].[Description] AS [Description], 
+    [Books_by_publisher].[Category_ID] AS [Category_ID], 
+    [Books_by_publisher].[Distributor_ID] AS [Distributor_ID]
+    FROM [dbo].[Books_by_publisher] AS [Books_by_publisher]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BooksWithAuthorsAndCategories" EntityType="Self.BooksWithAuthorsAndCategories" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BooksWithAuthorsAndCategories].[Title] AS [Title], 
+    [BooksWithAuthorsAndCategories].[Name] AS [Name], 
+    [BooksWithAuthorsAndCategories].[Category_name] AS [Category_name]
+    FROM [dbo].[BooksWithAuthorsAndCategories] AS [BooksWithAuthorsAndCategories]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Books__Author_id__778AC167" Association="Self.FK__Books__Author_id__778AC167">
+      <End Role="Authors" EntitySet="Authors" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Books__Category___74AE54BC" Association="Self.FK__Books__Category___74AE54BC">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Books__Distribut__76969D2E" Association="Self.FK__Books__Distribut__76969D2E">
+      <End Role="Distributors" EntitySet="Distributors" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Books__Publisher__75A278F5" Association="Self.FK__Books__Publisher__75A278F5">
+      <End Role="Publishers" EntitySet="Publishers" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inventory__ISBN__7D439ABD" Association="Self.FK__Inventory__ISBN__7D439ABD">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__Customer__06CD04F7" Association="Self.FK__Orders__Customer__06CD04F7">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__ISBN__05D8E0BE" Association="Self.FK__Orders__ISBN__05D8E0BE">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sales__ISBN__7A672E12" Association="Self.FK__Sales__ISBN__7A672E12">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Sales" EntitySet="Sales" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

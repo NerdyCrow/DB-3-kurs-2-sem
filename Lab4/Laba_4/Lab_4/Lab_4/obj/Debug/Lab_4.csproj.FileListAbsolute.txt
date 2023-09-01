@@ -1,0 +1,66 @@
+D:\Lab_4\Lab_4\obj\Debug\Lab_4.csproj.AssemblyReference.cache
+D:\Lab_4\Lab_4\obj\Debug\Lab_4.csproj.SuggestedBindingRedirects.cache
+D:\Lab_4\Lab_4\obj\Debug\MainWindow.g.cs
+D:\Lab_4\Lab_4\obj\Debug\App.g.cs
+D:\Lab_4\Lab_4\obj\Debug\Lab_4_Content.g.cs
+D:\Lab_4\Lab_4\obj\Debug\Lab_4_MarkupCompile.cache
+D:\Lab_4\Lab_4\obj\Debug\Lab_4_MarkupCompile.lref
+D:\Lab_4\Lab_4\bin\Debug\Lab_4.exe.config
+D:\Lab_4\Lab_4\bin\Debug\Lab_4.exe
+D:\Lab_4\Lab_4\bin\Debug\Lab_4.pdb
+D:\Lab_4\Lab_4\bin\Debug\EntityFramework.dll
+D:\Lab_4\Lab_4\bin\Debug\EntityFramework.SqlServer.dll
+D:\Lab_4\Lab_4\bin\Debug\EntityFramework.xml
+D:\Lab_4\Lab_4\bin\Debug\EntityFramework.SqlServer.xml
+D:\Lab_4\Lab_4\bin\Debug\ru\EntityFramework.resources.dll
+D:\Lab_4\Lab_4\obj\Debug\MainWindow.baml
+D:\Lab_4\Lab_4\obj\Debug\Lab_4.g.resources
+D:\Lab_4\Lab_4\obj\Debug\Lab_4.Properties.Resources.resources
+D:\Lab_4\Lab_4\obj\Debug\Lab_4.csproj.GenerateResource.cache
+D:\Lab_4\Lab_4\obj\Debug\Lab_4.csproj.CoreCompileInputs.cache
+D:\Lab_4\Lab_4\obj\Debug\Lab_4.csproj.CopyComplete
+D:\Lab_4\Lab_4\obj\Debug\Lab_4.exe
+D:\Lab_4\Lab_4\obj\Debug\Lab_4.pdb
+D:\Lab_4\Lab_4\bin\Debug\MaterialDesignColors.dll
+D:\Lab_4\Lab_4\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Lab_4\Lab_4\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\Lab_4\Lab_4\bin\Debug\MaterialDesignColors.pdb
+D:\Lab_4\Lab_4\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Lab_4\Lab_4\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Lab_4\Lab_4\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\Lab_4\Lab_4\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\Lab_4\Lab_4\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+D:\Lab_4\Lab_4\obj\Debug\App.baml
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\Lab_4.exe.config
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\Lab_4.exe
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\Lab_4.pdb
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\EntityFramework.dll
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\EntityFramework.SqlServer.dll
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\MaterialDesignColors.dll
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\Microsoft.Xaml.Behaviors.dll
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\EntityFramework.xml
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\EntityFramework.SqlServer.xml
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\MaterialDesignColors.pdb
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\Microsoft.Xaml.Behaviors.xml
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\ru\EntityFramework.resources.dll
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4.csproj.AssemblyReference.cache
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4.csproj.SuggestedBindingRedirects.cache
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\MainWindow.g.cs
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\App.g.cs
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4_Content.g.cs
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4_MarkupCompile.cache
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4_MarkupCompile.lref
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\App.baml
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\MainWindow.baml
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4.g.resources
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4.Properties.Resources.resources
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4.csproj.GenerateResource.cache
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4.csproj.CoreCompileInputs.cache
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4.csproj.CopyComplete
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4.exe
+F:\__3 курс 1 сем\БД2\Laba_4\Lab_4\Lab_4\obj\Debug\Lab_4.pdb

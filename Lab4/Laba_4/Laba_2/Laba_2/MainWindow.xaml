@@ -1,0 +1,132 @@
+﻿<Window x:Class="Laba_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laba_2"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="STUDENTS">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="503*"></ColumnDefinition>
+                        <ColumnDefinition Width="297*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Students" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
+                              AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="STUDENT" Binding="{Binding STUDENT1}" Width="auto"></DataGridTextColumn>
+                            <DataGridTextColumn Header="STUDENT_NAME" Binding="{Binding STUDENT_NAME}" Width="auto"></DataGridTextColumn>
+                            <DataGridTextColumn Header="FACULTY" Binding="{Binding FACULTY}" Width="auto"></DataGridTextColumn>
+                            <DataGridTextColumn Header="PHONE_NUMBER" Binding="{Binding PHONE_NUMBER}" Width="auto"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBlock Text="STUDENT" Grid.Column="1" Margin="0,0,0,0" Grid.Row="0"/>
+                    <TextBox Name="STUDENT" Grid.Column="1" Height="30" Margin="100,0,10,0" VerticalAlignment="Top" />
+                    <TextBlock Text="STUDENT_NAME" Grid.Column="1" Margin="0,50,0,0"/>
+                    <TextBox Name="STUDENT_NAME" Grid.Column="1" Height="30" Margin="100,40,10,0" VerticalAlignment="Top" />
+                    <TextBlock Text="FACULTY" Grid.Column="1" Margin="0,100,0,0"/>
+                    <TextBox Name="FACULTY" Grid.Column="1" Height="30" Margin="100,90,10,0" VerticalAlignment="Top" />
+                    <TextBlock Text="PHONE_NUMBER" Grid.Column="1" Margin="0,150,0,0"/>
+                    <TextBox Name="PHONE_NUMBER" Grid.Column="1" Height="30" Margin="100,140,10,0" VerticalAlignment="Top" />
+                    <Button Name="CreateStudent" Content="Create" Click="CreateStudent_Click" Grid.Column="1" Width="100" Margin="0, 50, 0, 0"/>
+                    <Button Name="UpdateStudent" Content="Update" Click="UpdateStudent_Click" Grid.Column="1" Width="100" Margin="0, 150, 0, 0"></Button>
+                    <Button Name="DeleteStudent" Content="Delete" Click="DeleteStudent_Click" Grid.Column="1" Width="100" Margin="0, 250, 0, 0"></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="FACULTIES">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="503*"></ColumnDefinition>
+                        <ColumnDefinition Width="297*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Faculties" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
+                              AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="FACULTY" Binding="{Binding FACULTY1}" Width="auto"></DataGridTextColumn>
+                            <DataGridTextColumn Header="FACULTY_NAME" Binding="{Binding FACULTY_NAME}" Width="auto"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBlock Text="FACULTY" Grid.Column="1" Margin="0,0,0,0" Grid.Row="0"/>
+                    <TextBox Name="FACULTY1" Grid.Column="1" Height="30" Margin="100,0,10,0" VerticalAlignment="Top" />
+                    <TextBlock Text="FACULTY_NAME" Grid.Column="1" Margin="0,50,0,0"/>
+                    <TextBox Name="FACULTY_NAME" Grid.Column="1" Height="30" Margin="100,40,10,0" VerticalAlignment="Top" />
+                    <Button Name="CreateFaculty" Content="Create" Click="CreateFaculty_Click" Grid.Column="1" Width="100" Margin="0, 50, 0, 0"/>
+                    <Button Name="UpdateFaculty" Content="Update" Click="UpdateFaculty_Click" Grid.Column="1" Width="100" Margin="0, 150, 0, 0"></Button>
+                    <Button Name="DeleteFaculty" Content="Delete" Click="DeleteFaculty_Click" Grid.Column="1" Width="100" Margin="0, 250, 0, 0"></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="PULPITS">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="503*"></ColumnDefinition>
+                        <ColumnDefinition Width="297*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Pulpits" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
+                              AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="PULPIT" Binding="{Binding PULPIT1}" Width="auto"></DataGridTextColumn>
+                            <DataGridTextColumn Header="PULPIT_NAME" Binding="{Binding PULPIT_NAME}" Width="auto"></DataGridTextColumn>
+                            <DataGridTextColumn Header="FACULTY" Binding="{Binding FACULTY}" Width="auto"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBlock Text="PULPIT" Grid.Column="1" Margin="0,0,0,0" Grid.Row="0"/>
+                    <TextBox Name="PULPIT" Grid.Column="1" Height="30" Margin="100,0,10,0" VerticalAlignment="Top" />
+                    <TextBlock Text="PULPIT_NAME" Grid.Column="1" Margin="0,50,0,0"/>
+                    <TextBox Name="PULPIT_NAME" Grid.Column="1" Height="30" Margin="100,40,10,0" VerticalAlignment="Top" />
+                    <TextBlock Text="FACULTY" Grid.Column="1" Margin="0,100,0,0"/>
+                    <TextBox Name="FACULTY2" Grid.Column="1" Height="30" Margin="100,90,10,0" VerticalAlignment="Top" />
+                    <Button Name="CreatePulpit" Content="Create" Click="CreatePulpit_Click" Grid.Column="1" Width="100" Margin="0, 50, 0, 0"/>
+                    <Button Name="UpdatePulpit" Content="Update" Click="UpdatePulpit_Click" Grid.Column="1" Width="100" Margin="0, 150, 0, 0"></Button>
+                    <Button Name="DeletePulpit" Content="Delete" Click="DeletePulpit_Click" Grid.Column="1" Width="100" Margin="0, 250, 0, 0"></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Набор">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="503*"></ColumnDefinition>
+                        <ColumnDefinition Width="503*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="StudentsMarks" Grid.Column="0" Grid.Row="0" 
+                              AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="STUDENT" Binding="{Binding STUDENT}" Width="auto"></DataGridTextColumn>
+                            <DataGridTextColumn Header="STUDENT_NAME" Binding="{Binding STUDENT_NAME}" Width="auto"></DataGridTextColumn>
+                            <DataGridTextColumn Header="MARK" Binding="{Binding MARK}" Width="auto"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBlock Text="FACULTY" Grid.Column="1" Margin="0,100,0,0"/>
+                    <TextBox Name="FACULTY3" Grid.Column="1" Height="30" Margin="100,90,10,0" VerticalAlignment="Top" />
+                    <Button Name="Select" Content="Select" Click="Select_Click" Grid.Column="1" Width="100" Margin="0, 0, 0, 0"></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Laba_4">
+                <Grid>
+                    <TextBlock Text="CoordX" Grid.Column="1" Margin="0,0,0,0" Grid.Row="0"/>
+                    <TextBox Name="CoordX" Grid.Column="1" Height="30" Margin="100,0,10,0" VerticalAlignment="Top" />
+                    <TextBlock Text="CoordY" Grid.Column="1" Margin="0,50,0,0"/>
+                    <TextBox Name="CoordY" Grid.Column="1" Height="30" Margin="100,40,10,0" VerticalAlignment="Top" />
+                    <Button Name="Union" Content="Union" Click="Inter_Click" Grid.Column="1" Width="100" Margin="0, 0, 600, 150"></Button>
+                    <Button Name="Distance" Content="Distance" Click="Distance_Click" Grid.Column="1" Width="100" Margin="0, 0, 600, 0"></Button>
+                    <TextBlock Name="CoordXText" Text="q" Grid.Column="1" Margin="50,250,0,0" Grid.Row="0"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
